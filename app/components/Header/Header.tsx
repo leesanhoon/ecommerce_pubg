@@ -70,7 +70,7 @@ const Header = () => {
           component="div"
           sx={{ color: 'primary.main', fontWeight: 'bold', flexGrow: isMobile ? 0 : 1 }}
         >
-          PUBG STORE
+          StannL Shop
         </Typography>
 
         {!isMobile && (

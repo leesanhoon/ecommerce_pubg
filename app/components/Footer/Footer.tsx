@@ -52,7 +52,7 @@ const Footer = () => {
           {/* Company Info */}
           <Box sx={{ flex: { xs: '1 1 100%', md: '1 1 calc(33% - 16px)' } }}>
             <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold' }}>
-              PUBG STORE
+              StannL Shop
             </Typography>
             <Box sx={{ mb: 2 }}>
               <Typography
@@ -174,7 +174,7 @@ const Footer = () => {
           align="center"
           sx={{ color: 'grey.500' }}
         >
-          © {new Date().getFullYear()} PUBG Store. Tất cả quyền được bảo lưu.
+          © {new Date().getFullYear()} StannL Shop. Tất cả quyền được bảo lưu.
         </Typography>
       </Container>
     </Box>

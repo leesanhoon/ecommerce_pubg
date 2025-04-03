@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'PUBG Store - Gaming Gear & Accessories',
+  title: 'StannL Shop - Gaming Gear & Accessories',
   description: 'Shop the best gaming gear, accessories, and merchandise for PUBG enthusiasts.',
   keywords: 'PUBG, gaming gear, gaming accessories, gaming merchandise, gaming equipment',
   robots: 'index, follow',
