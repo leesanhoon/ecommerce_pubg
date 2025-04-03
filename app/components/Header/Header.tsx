@@ -9,8 +9,6 @@ import {
   TextField,
   Box,
   Button,
-  Menu,
-  MenuItem,
   useTheme,
   useMediaQuery,
   Drawer,
@@ -44,19 +42,9 @@ const Header = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const { totalItems, isShaking } = useCart();
 
-
   const menuItems = ['Trang chủ', 'Sản phẩm', 'Giới thiệu', 'Liên hệ'];
-
-  const handleMenuClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-  };
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);

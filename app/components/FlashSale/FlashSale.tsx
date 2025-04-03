@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Typography, Grid, useTheme } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import { Bolt } from '@mui/icons-material';
 import CountdownTimer from './CountdownTimer';
 import ProductCard from '../ProductCard/ProductCard';
@@ -45,8 +45,6 @@ const flashSaleProducts = [
 ];
 
 const FlashSale = () => {
-  const theme = useTheme();
-  
   // Set flash sale end time to 24 hours from now
   const endTime = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
 
