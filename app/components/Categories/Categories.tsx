@@ -19,14 +19,10 @@ import {
 } from '@mui/icons-material';
 
 const categories = [
-  { name: 'Điện thoại', icon: Smartphone },
-  { name: 'Gaming Gear', icon: SportsEsports },
-  { name: 'Tai nghe', icon: Headphones },
-  { name: 'Linh kiện', icon: Memory },
-  { name: 'Chuột', icon: Mouse },
-  { name: 'Bàn phím', icon: Keyboard },
-  { name: 'Phụ kiện', icon: DevicesOther },
-  { name: 'Thời trang', icon: Style },
+  { name: 'Steam Wallet', icon: Memory },
+  { name: 'Steam Code', icon: SportsEsports },
+  { name: 'PUBG Mobile', icon: Smartphone },
+  { name: 'G-Coin PUBG', icon: Style },
 ];
 
 const Categories = () => {

@@ -7,22 +7,22 @@ import "slick-carousel/slick/slick-theme.css";
 
 const bannerItems = [
   {
-    title: 'New Season Collection',
-    description: 'Khám phá bộ sưu tập mới nhất của chúng tôi',
-    imageUrl: 'https://picsum.photos/1200/400',
+    title: 'PUBG SEASON 2024',
+    description: 'Nạp UC PUBG Mobile với giá tốt nhất thị trường',
+    imageUrl: 'https://source.unsplash.com/1600x900/?gaming',
+    action: 'Nạp ngay',
+  },
+  {
+    title: 'Steam Wallet Sale',
+    description: 'Giảm giá đến 30% cho tất cả gói Steam Wallet',
+    imageUrl: 'https://source.unsplash.com/1600x900/?videogame',
     action: 'Mua ngay',
   },
   {
-    title: 'Summer Sale',
-    description: 'Giảm giá lên đến 50% cho các sản phẩm mùa hè',
-    imageUrl: 'https://picsum.photos/1200/400',
-    action: 'Xem thêm',
-  },
-  {
-    title: 'Special Offers',
-    description: 'Ưu đãi đặc biệt cho thành viên',
-    imageUrl: 'https://picsum.photos/1200/400',
-    action: 'Tham gia ngay',
+    title: 'Game Codes',
+    description: 'Mua Game Steam với giá tốt nhất',
+    imageUrl: 'https://source.unsplash.com/1600x900/?game',
+    action: 'Khám phá ngay',
   },
 ];
 

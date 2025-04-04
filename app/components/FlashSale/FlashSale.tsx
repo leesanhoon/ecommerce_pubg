@@ -8,39 +8,39 @@ import ProductCard from '../ProductCard/ProductCard';
 const flashSaleProducts = [
   {
     id: '1',
-    name: 'PUBG Gaming Backpack Pro',
-    price: 499000,
-    originalPrice: 1200000,
-    image: 'https://picsum.photos/400/400',
-    rating: 4.7,
-    discount: 58,
+    name: 'Steam Wallet 500 USD - Flash Deal',
+    price: 11500000,
+    originalPrice: 15000000,
+    image: 'https://i.imgur.com/QZpxN8k.png',
+    rating: 4.9,
+    discount: 23,
   },
   {
     id: '2',
-    name: 'Gaming Mouse Pad XL',
-    price: 199000,
-    originalPrice: 450000,
-    image: 'https://picsum.photos/400/400',
-    rating: 4.5,
-    discount: 55,
+    name: 'Steam Game Code Bundle - 10 Games',
+    price: 990000,
+    originalPrice: 2500000,
+    image: 'https://i.imgur.com/ZJ3HMq7.jpg',
+    rating: 4.8,
+    discount: 60,
   },
   {
     id: '3',
-    name: 'USB Gaming Headset Stand',
-    price: 299000,
-    originalPrice: 600000,
-    image: 'https://picsum.photos/400/400',
-    rating: 4.6,
-    discount: 50,
+    name: 'PUBG Mobile 16800 UC - Super Deal',
+    price: 2990000,
+    originalPrice: 4500000,
+    image: 'https://source.unsplash.com/800x600/?gaming,tournament',
+    rating: 4.9,
+    discount: 33,
   },
   {
     id: '4',
-    name: 'RGB LED Strip Gaming',
-    price: 159000,
-    originalPrice: 400000,
-    image: 'https://picsum.photos/400/400',
-    rating: 4.4,
-    discount: 60,
+    name: 'PUBG G-Coin 20000 - Mega Pack',
+    price: 3500000,
+    originalPrice: 5000000,
+    image: 'https://source.unsplash.com/800x600/?gaming,competition',
+    rating: 4.8,
+    discount: 30,
   },
 ];
 
@@ -49,12 +49,15 @@ const FlashSale = () => {
   const endTime = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
 
   return (
-    <Box 
+    <Box
       sx={{
         py: 6,
-        backgroundColor: 'error.main',
+        background: 'linear-gradient(-45deg, #ff0844 0%, #ff4563 100%)',
         position: 'relative',
         overflow: 'hidden',
+        borderRadius: '16px',
+        my: 4,
+        boxShadow: '0 10px 20px rgba(255, 8, 68, 0.2)',
       }}
     >
       {/* Background Pattern */}
@@ -66,8 +69,12 @@ const FlashSale = () => {
           right: 0,
           bottom: 0,
           opacity: 0.1,
-          backgroundImage: 'linear-gradient(45deg, #000 25%, transparent 25%), linear-gradient(-45deg, #000 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #000 75%), linear-gradient(-45deg, transparent 75%, #000 75%)',
-          backgroundSize: '20px 20px',
+          background: 'linear-gradient(90deg, #fff 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(90deg, #fff 25%, transparent 25%) 0px 0/ 20px 20px',
+          animation: 'slide 1s linear infinite',
+          '@keyframes slide': {
+            '0%': { backgroundPosition: '-10px 0, 0px 0' },
+            '100%': { backgroundPosition: '10px 0, 20px 0' }
+          }
         }}
       />
       
@@ -83,15 +90,38 @@ const FlashSale = () => {
           }}
         >
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <Bolt sx={{ color: 'white', fontSize: 40 }} />
+            <Bolt
+              sx={{
+                color: 'white',
+                fontSize: 40,
+                animation: 'pulse 2s infinite',
+                '@keyframes pulse': {
+                  '0%': { transform: 'scale(1)' },
+                  '50%': { transform: 'scale(1.2)' },
+                  '100%': { transform: 'scale(1)' }
+                }
+              }}
+            />
             <Typography
               variant="h4"
               component="h2"
               sx={{
-                fontWeight: 'bold',
+                fontWeight: 900,
                 color: 'white',
                 display: 'flex',
                 alignItems: 'center',
+                textShadow: '0 0 10px rgba(255,255,255,0.5)',
+                position: 'relative',
+                '&::after': {
+                  content: '""',
+                  position: 'absolute',
+                  bottom: -8,
+                  left: 0,
+                  width: '100%',
+                  height: '2px',
+                  background: 'white',
+                  boxShadow: '0 0 10px rgba(255,255,255,0.8)'
+                }
               }}
             >
               Flash Sale
@@ -110,13 +140,47 @@ const FlashSale = () => {
               md: 'repeat(4, 1fr)',
             },
             gap: 3,
+            '& > div': {
+              transition: 'transform 0.3s ease',
+              '&:hover': {
+                transform: 'translateY(-8px)',
+              }
+            }
           }}
         >
           {flashSaleProducts.map((product) => (
-            <ProductCard
-              key={product.id}
-              {...product}
-            />
+            <Box key={product.id} sx={{ position: 'relative' }}>
+              <ProductCard {...product} />
+              <Box
+                sx={{
+                  position: 'absolute',
+                  bottom: 8,
+                  left: 8,
+                  right: 8,
+                  background: 'rgba(255,255,255,0.9)',
+                  borderRadius: 1,
+                  p: 1,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 0.5
+                }}
+              >
+                <Typography variant="caption" sx={{ color: 'text.secondary' }}>
+                  Đã bán: {Math.floor(Math.random() * 100)} sản phẩm
+                </Typography>
+                <Box sx={{ width: '100%', bgcolor: '#ffebee', height: 4, borderRadius: 2 }}>
+                  <Box
+                    sx={{
+                      width: `${Math.floor(Math.random() * 70 + 30)}%`,
+                      bgcolor: 'error.main',
+                      height: '100%',
+                      borderRadius: 2,
+                      transition: 'width 1s ease-in-out'
+                    }}
+                  />
+                </Box>
+              </Box>
+            </Box>
           ))}
         </Box>
       </Container>
